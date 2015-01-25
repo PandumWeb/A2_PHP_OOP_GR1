@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+        <form method="post">
+    <div class="form-group">
+        <label for="trainername">Dresseur: </label>
+        <div class="input-group">
+            <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+            <input type="text" class="form-control" id="trainername" name="trainername" placeholder="dresseur">
+        </div>
+
+    </div>
+    <div class="form-group">
+        <label for="password">Mot de passe: </label>
+        <div class="input-group">
+            <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+            <input type="password" class="form-control" id="password" name="password" placeholder="mot de passe">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-default" name="loginSubmit">Submit</button>
+    </form>
+    <p><a href="user_new.php">Create user</a></p>
+    {% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+    <h1>Salut {{ username }} !</h1>
+    <div>
+        {% if pokemonExist %}
+            <h2>Ton pokemon est {{ pokemonName }} et il a {{ pokemonHP }} HP !</h2>
+            {% if pokemonFight %}
+                <h3><a href="fight.php">Place au combat</a></h3>
+            {% else %}
+                <h3>Ton pokemon est K.O ! <a href="resuscitate_pokemon.php"><button type="button" class="btn btn-warning">Ressusciter</button></a> le !</h3>
+            {% endif %}
+        {% endif %}
+       <a href="logout.php"><button id="logout" type="submit" class="btn btn-success">Logout</button></a>
+<div>
+    </div>
+{% endblock %}

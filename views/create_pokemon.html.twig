@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+ {% block content %}
+ <h1>Créer ton pokemon !</h1>
+        <form method="post">
+          <div class="form-group">
+    <label for="pokemonName">Nom:</label>
+    <input type="text" class="form-control" name="pokemonName" placeholder="Nom du pokemon" required autofocus>
+  </div>
+
+<label for="pokemonFire">Feu</label>
+<input type="radio" name="pokemonType" value="Fire"/>
+<label for="pokemonWater">Eau</label>
+<input type="radio" name="pokemonType" value="Water"/>
+ <label for="pokemonPlant">Plante</label>
+ <input type="radio" name="pokemonType" value="Plant"/>
+            <br>
+            <input type="submit" value="Creer"/>
+        </form><br>
+<a href="logout.php"><button id="logout" type="submit" class="btn btn-success">Se déconnecter</button></a> 
+ {% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+    <h1>Qui choisis tu d'affronter ?</h1>
+
+        <table class="table table-striped">
+      <thead>
+        <tr>
+
+          <th>Nom du pokemon</th>
+          <th>Dresseur</th>
+          <th>HP</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for pokemon in pokemons %}
+        <tr>
+
+          <td> <a href="fight.php?id={{ pokemon.trainerId.id }}">{{ pokemon.name }}</a> </td>
+          <td>{{ pokemon.trainerId.trainername }}</td>
+          <td>{{ pokemon.hp }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <a href="{{ home }}"><button type="button" class="btn btn-primary">Revenir à l'accueil</button></a>
+
+{% endblock %}
