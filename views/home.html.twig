@@ -1,6 +1,7 @@
 {% extends 'base.html.twig' %}
 {% block content %}
-    <h1>Salut {{ username }} !</h1>
+<div class="container">
+    <h1>Salut {{ trainername }} !</h1>
     <div>
         {% if pokemonExist %}
             <h2>Ton pokemon est {{ pokemonName }} et il a {{ pokemonHP }} HP !</h2>
@@ -12,5 +13,6 @@
         {% endif %}
        <a href="logout.php"><button id="logout" type="submit" class="btn btn-success">Logout</button></a>
 <div>
+    </div>
     </div>
 {% endblock %}

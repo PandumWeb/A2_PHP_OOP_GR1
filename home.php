@@ -22,7 +22,7 @@ if ($pokemonExist) {
         $pokemonName = $pokemon->getName();
 } 
 echo $twig->render('home.html.twig', [
-    'username'     => $_SESSION['trainername'],
+    'trainername'     => $_SESSION['trainername'],
     'logout'       => 'logout.php',
     'pokemonExist'  => $pokemonExist,
     'pokemonFight' => $pokemonFight,

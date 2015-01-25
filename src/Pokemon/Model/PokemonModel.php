@@ -190,13 +190,5 @@ abstract class PokemonModel implements PokemonInterface
      *
      * @throws \Exception
      */
-    public function attack(PokemonModel $target)
-    {
-        $attackValue = mt_rand(10, 20);
-        if ($this->isTypeStrong($target->getType()))
-            $attackValue = ceil($attackValue * 1.5);
-        if ($this->isTypeWeak($target->getType()))
-            $attackValue = ceil($attackValue / 1.5);
-        $target->removeHP((int)$attackValue);
-    }
+   
 }
